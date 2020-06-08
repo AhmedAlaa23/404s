@@ -28,8 +28,10 @@ body{
 	--moon-color: #cd4748;
 }
 
-.lights-out{
+.darkest{
 	--bg: var(--bg-lights-out-color);
+	--title-color: var(--text-dark-color);
+	--moon-color: #cd4748;
 }
 
 #wrapper{
@@ -38,16 +40,17 @@ body{
 	justify-content: space-between;
 	align-items: center;
 	background-color: var(--bg);
+	transition: background 0.5s;
 }
 
 #bg{
-	/* margin: 0 auto; */
 	overflow: hidden;
 	flex: 1;
 }
 
 .moon-color{
 	fill: var(--moon-color);
+	transition: fill 0.5s;
 }
 
 #title-404{
@@ -58,11 +61,39 @@ body{
 
 #title-404 > h1{
 	font-size: 25vw;
-	/* font-size: 400px; */
 	padding: 10px;
 	font-family: sans-serif;
 	user-select: none;
 	color: var(--title-color);
+	transition: color 0.5s;
+}
+
+#theme-switcher{
+	position: absolute;
+	top: 0;
+	right: 20px;
+	display: flex;
+	background-color: #6c63ff;
+	border-bottom-right-radius: 3px;
+	border-bottom-left-radius: 3px;
+}
+
+#theme-switcher > span{
+	display: none;
+	cursor: pointer;
+	margin: 5px 5px 0px 5px;
+}
+
+#light-theme-btn > svg{
+	fill: #FF9800;
+}
+
+#dark-theme-btn > svg{
+	fill: #222;
+}
+
+#darkest-theme-btn > svg{
+	fill: #000;
 }
 
 @media screen and (max-width: 800px) {
