@@ -7,7 +7,7 @@
 :root{
 	--bg-light-color: #fff;
 	--bg-dark-color: #404040;
-	--bg-lights-out-color: #000;
+	--bg-darkest-color: #000;
 	--text-light-color: #404040;
 	--text-dark-color: #fff;
 }
@@ -29,7 +29,7 @@ body{
 }
 
 .darkest{
-	--bg: var(--bg-lights-out-color);
+	--bg: var(--bg-darkest-color);
 	--title-color: var(--text-dark-color);
 	--moon-color: #cd4748;
 }
@@ -78,7 +78,7 @@ body{
 }
 
 #theme-switcher > span{
-	display: none;
+	display: inline;
 	cursor: pointer;
 	margin: 5px 5px 0px 5px;
 }
